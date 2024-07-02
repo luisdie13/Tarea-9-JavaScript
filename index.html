@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enemy Tracker</title>
+</head>
+<body>
+    <h1>Enemy Tracker</h1>
+    <p>Enter the information for each enemy and click the button to find the closest one.</p>
+    <form id="enemy-form">
+        <label for="enemy1-name">Enemy 1 Name:</label>
+        <input type="text" id="enemy1-name" required><br>
+        <label for="enemy1-distance">Enemy 1 Distance:</label>
+        <input type="number" id="enemy1-distance" required><br>
+        <label for="enemy2-name">Enemy 2 Name:</label>
+        <input type="text" id="enemy2-name" required><br>
+        <label for="enemy2-distance">Enemy 2 Distance:</label>
+        <input type="number" id="enemy2-distance" required><br>
+        <button type="button" onclick="findClosestEnemy()">Find Closest Enemy</button>
+    </form>
+    <p id="result"></p>
+    <script src="script1.js"></script>
+</body>
+</html>
