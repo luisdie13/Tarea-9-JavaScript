@@ -1,15 +1,19 @@
+/** Encontrando al enemigo mas cercano */
+
 const players = [
-  { name: 'enemyA', dist1: 10 },
-  { name: 'enemyB', dist2: 20 }
+  { name: 'enemyA', distance: 10 },
+  { name: 'enemyB', distance: 20 },
 ]
 
-function findClosestEnemy(enemies) {
-  let closestEnemy = enemies[0];
+function findClosestEnemy(players) {
+  let closestEnemy = players[0];
 
-  for (let i = 1; i < enemies.lenght; i++) {
-    if (enemies[i].distance < closestEnemy) {
-      closestEnemy = enemies[i];
+  for (let i = 1; i < players.lenght; i++) {
+    if (players[i].distance < closestEnemy.distance) {
+      closestEnemy = players[i];
     }
   }
   return closestEnemy.name;
 }
+
+console.log("El enemigo más cercano es: " + findClosestEnemy(players));
